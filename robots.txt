@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://abconstruction-uk.surge.sh/sitemap.xml
+Sitemap: https://ab-construction-swadlincote.surge.sh/sitemap.xml
