@@ -1346,3 +1346,139 @@ img {
     font-size: 2rem;
   }
 }
+
+/* ===== Blog Article Styles ===== */
+.blog-article {
+  padding: 60px 0;
+}
+
+.blog-article .container {
+  max-width: 800px;
+}
+
+.blog-content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--gray-700);
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.blog-content h3 {
+  font-size: 1.4rem;
+  color: var(--primary-light);
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.blog-content p {
+  margin-bottom: 18px;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 15px 0 25px 25px;
+}
+
+.blog-content ul li,
+.blog-content ol li {
+  margin-bottom: 8px;
+  padding-left: 5px;
+}
+
+.blog-content ul li::marker {
+  color: var(--accent);
+}
+
+.blog-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(33, 150, 243, 0.3);
+  text-underline-offset: 3px;
+  transition: var(--transition);
+}
+
+.blog-content a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent-dark);
+}
+
+.blog-content blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--gray-100);
+  padding: 20px 25px;
+  margin: 25px 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  color: var(--gray-700);
+}
+
+.blog-content blockquote p {
+  margin-bottom: 0;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.blog-content table thead th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.blog-content table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.blog-content table tbody tr:nth-child(even) {
+  background: var(--gray-100);
+}
+
+.blog-content table tbody tr:hover {
+  background: rgba(33, 150, 243, 0.05);
+}
+
+.blog-content strong {
+  color: var(--text-dark);
+}
+
+.blog-content em {
+  color: var(--gray-600);
+}
+
+/* ===== Related Blog Link in Service Pages ===== */
+.related-blog-link {
+  background: var(--gray-100);
+  border-left: 4px solid var(--accent);
+  padding: 15px 20px;
+  margin: 25px 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.related-blog-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.related-blog-link a:hover {
+  color: var(--accent-dark);
+}
