@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | AB Construction Ltd</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .admin-body { background: var(--gray-100); min-height: 100vh; }
+    .admin-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+    .admin-search { padding: 10px 16px; border: 2px solid var(--gray-300); border-radius: var(--radius); font-size: 0.95rem; min-width: 250px; }
+    .admin-search:focus { outline: none; border-color: var(--accent); }
+    .admin-filter { padding: 10px 16px; border: 2px solid var(--gray-300); border-radius: var(--radius); font-size: 0.95rem; background: white; }
+    .admin-actions { display: flex; gap: 10px; }
+    .lead-detail-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; justify-content: center; align-items: center; }
+    .lead-detail-modal.open { display: flex; }
+    .lead-detail-content { background: white; border-radius: var(--radius); padding: 30px; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto; }
+    .lead-detail-content h3 { color: var(--primary); margin-bottom: 20px; }
+    .lead-detail-row { display: flex; padding: 10px 0; border-bottom: 1px solid var(--gray-200); }
+    .lead-detail-label { font-weight: 600; color: var(--gray-700); min-width: 100px; }
+    .lead-detail-value { color: var(--text-dark); flex: 1; }
+    .no-leads { text-align: center; padding: 60px 20px; color: var(--gray-600); }
+    .no-leads h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--gray-500); }
+    .delete-btn { background: #ef4444; color: white; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+    .delete-btn:hover { background: #dc2626; }
+    .view-btn { background: var(--accent); color: white; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+    .view-btn:hover { background: var(--accent-dark); }
+    .status-btn { cursor: pointer; border: none; }
+    .export-btn { background: #16a34a; color: white; border: none; padding: 10px 20px; border-radius: var(--radius); cursor: pointer; font-weight: 600; }
+    .export-btn:hover { background: #15803d; }
+    .clear-btn { background: #ef4444; color: white; border: none; padding: 10px 20px; border-radius: var(--radius); cursor: pointer; font-weight: 600; }
+    .clear-btn:hover { background: #dc2626; }
+    .demo-btn { background: var(--accent); color: white; border: none; padding: 10px 20px; border-radius: var(--radius); cursor: pointer; font-weight: 600; }
+    .demo-btn:hover { background: var(--accent-dark); }
+  </style>
+</head>
+<body class="admin-body">
+  <!-- Admin Header -->
+  <header class="admin-header">
+    <div class="container">
+      <div style="display:flex; align-items:center; gap:15px;">
+        <a href="index.html" style="color:var(--accent-light); font-size:0.9rem;">← Back to Website</a>
+        <h1>📊 Admin Panel — Lead Management</h1>
+      </div>
+      <div style="color:var(--gray-400); font-size:0.9rem;">
+        AB Construction Ltd
+      </div>
+    </div>
+  </header>
+
+  <div class="container" style="padding-top:20px; padding-bottom:40px;">
+    <!-- Login Gate -->
+    <div id="loginGate">
+      <div class="admin-login">
+        <h2>🔐 Admin Login</h2>
+        <p style="color:var(--gray-600); margin-bottom:20px;">Enter the admin password to access the lead management panel.</p>
+        <div class="form-group">
+          <input type="password" id="adminPassword" placeholder="Enter admin password" style="text-align:center;">
+        </div>
+        <button onclick="attemptLogin()" class="btn btn-primary" style="width:100%;">Login</button>
+        <p style="color:var(--gray-500); font-size:0.8rem; margin-top:15px;">Default password: <strong>admin2025</strong></p>
+      </div>
+    </div>
+
+    <!-- Admin Dashboard (hidden until login) -->
+    <div id="adminDashboard" style="display:none;">
+      <!-- Stats -->
+      <div class="admin-stats" id="adminStats">
+        <div class="admin-stat-card">
+          <h3 id="totalLeads">0</h3>
+          <p>Total Leads</p>
+        </div>
+        <div class="admin-stat-card">
+          <h3 id="newLeads">0</h3>
+          <p>New Leads</p>
+        </div>
+        <div class="admin-stat-card">
+          <h3 id="contactedLeads">0</h3>
+          <p>Contacted</p>
+        </div>
+        <div class="admin-stat-card">
+          <h3 id="todayLeads">0</h3>
+          <p>Today's Leads</p>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="admin-toolbar">
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <input type="text" class="admin-search" id="searchInput" placeholder="🔍 Search leads..." oninput="renderLeads()">
+          <select class="admin-filter" id="serviceFilter" onchange="renderLeads()">
+            <option value="">All Services</option>
+            <option value="Brickwork">Brickwork</option>
+            <option value="Joinery">Joinery</option>
+            <option value="Extensions">Extensions</option>
+            <option value="Loft Conversions">Loft Conversions</option>
+            <option value="Kitchens">Kitchens</option>
+            <option value="Bathrooms">Bathrooms</option>
+            <option value="Renovation Works">Renovation Works</option>
+          </select>
+          <select class="admin-filter" id="statusFilter" onchange="renderLeads()">
+            <option value="">All Statuses</option>
+            <option value="new">New</option>
+            <option value="contacted">Contacted</option>
+          </select>
+        </div>
+        <div class="admin-actions">
+          <button class="demo-btn" onclick="addDemoLeads()">+ Add Demo Leads</button>
+          <button class="export-btn" onclick="exportLeads()">📥 Export CSV</button>
+          <button class="clear-btn" onclick="clearAllLeads()">🗑️ Clear All</button>
+        </div>
+      </div>
+
+      <!-- Leads Table -->
+      <div class="leads-table" id="leadsTableContainer">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Service</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leadsTableBody">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="no-leads" id="noLeadsMessage" style="display:none;">
+        <h3>📭 No Leads Yet</h3>
+        <p>When visitors submit the contact form, their enquiries will appear here.</p>
+        <p style="margin-top:10px;">Click "Add Demo Leads" above to see how it works.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lead Detail Modal -->
+  <div class="lead-detail-modal" id="leadModal">
+    <div class="lead-detail-content" id="leadModalContent">
+    </div>
+  </div>
+
+  <script>
+    // Admin password
+    const ADMIN_PASSWORD = 'admin2025';
+
+    function attemptLogin() {
+      const password = document.getElementById('adminPassword').value;
+      if (password === ADMIN_PASSWORD) {
+        document.getElementById('loginGate').style.display = 'none';
+        document.getElementById('adminDashboard').style.display = 'block';
+        renderLeads();
+      } else {
+        alert('Incorrect password. Please try again.');
+      }
+    }
+
+    // Enter key on password field
+    document.getElementById('adminPassword').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') attemptLogin();
+    });
+
+    function getLeads() {
+      return JSON.parse(localStorage.getItem('ab_construction_leads') || '[]');
+    }
+
+    function saveLeads(leads) {
+      localStorage.setItem('ab_construction_leads', JSON.stringify(leads));
+    }
+
+    function updateStats() {
+      const leads = getLeads();
+      const today = new Date().toDateString();
+      
+      document.getElementById('totalLeads').textContent = leads.length;
+      document.getElementById('newLeads').textContent = leads.filter(l => l.status === 'new').length;
+      document.getElementById('contactedLeads').textContent = leads.filter(l => l.status === 'contacted').length;
+      document.getElementById('todayLeads').textContent = leads.filter(l => new Date(l.date).toDateString() === today).length;
+    }
+
+    function renderLeads() {
+      let leads = getLeads();
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const serviceFilter = document.getElementById('serviceFilter').value;
+      const statusFilter = document.getElementById('statusFilter').value;
+
+      // Apply filters
+      if (search) {
+        leads = leads.filter(l => 
+          (l.name || '').toLowerCase().includes(search) ||
+          (l.email || '').toLowerCase().includes(search) ||
+          (l.phone || '').toLowerCase().includes(search) ||
+          (l.message || '').toLowerCase().includes(search)
+        );
+      }
+      if (serviceFilter) {
+        leads = leads.filter(l => l.service === serviceFilter);
+      }
+      if (statusFilter) {
+        leads = leads.filter(l => l.status === statusFilter);
+      }
+
+      const tbody = document.getElementById('leadsTableBody');
+      const noLeads = document.getElementById('noLeadsMessage');
+      const table = document.getElementById('leadsTableContainer');
+
+      if (leads.length === 0) {
+        table.style.display = 'none';
+        noLeads.style.display = 'block';
+      } else {
+        table.style.display = 'block';
+        noLeads.style.display = 'none';
+      }
+
+      tbody.innerHTML = leads.map(function(lead, index) {
+        const date = new Date(lead.date);
+        const dateStr = date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+        const timeStr = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        const statusClass = lead.status === 'new' ? 'new' : 'contacted';
+        
+        return '<tr>' +
+          '<td>' + dateStr + '<br><small style="color:var(--gray-500)">' + timeStr + '</small></td>' +
+          '<td><strong>' + (lead.name || 'N/A') + '</strong></td>' +
+          '<td><a href="tel:' + (lead.phone || '') + '" style="color:var(--accent)">' + (lead.phone || 'N/A') + '</a></td>' +
+          '<td><a href="mailto:' + (lead.email || '') + '" style="color:var(--accent)">' + (lead.email || 'N/A') + '</a></td>' +
+          '<td>' + (lead.service || 'General') + '</td>' +
+          '<td><button class="lead-status status-btn ' + statusClass + '" onclick="toggleStatus(' + lead.id + ')">' + lead.status + '</button></td>' +
+          '<td>' +
+            '<button class="view-btn" onclick="viewLead(' + lead.id + ')">View</button> ' +
+            '<button class="delete-btn" onclick="deleteLead(' + lead.id + ')">Delete</button>' +
+          '</td>' +
+        '</tr>';
+      }).join('');
+
+      updateStats();
+    }
+
+    function toggleStatus(id) {
+      const leads = getLeads();
+      const lead = leads.find(l => l.id === id);
+      if (lead) {
+        lead.status = lead.status === 'new' ? 'contacted' : 'new';
+        saveLeads(leads);
+        renderLeads();
+      }
+    }
+
+    function viewLead(id) {
+      const leads = getLeads();
+      const lead = leads.find(l => l.id === id);
+      if (!lead) return;
+
+      const date = new Date(lead.date);
+      const content = document.getElementById('leadModalContent');
+      content.innerHTML = 
+        '<h3>Lead Details</h3>' +
+        '<div class="lead-detail-row"><div class="lead-detail-label">Name</div><div class="lead-detail-value">' + (lead.name || 'N/A') + '</div></div>' +
+        '<div class="lead-detail-row"><div class="lead-detail-label">Phone</div><div class="lead-detail-value"><a href="tel:' + (lead.phone || '') + '" style="color:var(--accent)">' + (lead.phone || 'N/A') + '</a></div></div>' +
+        '<div class="lead-detail-row"><div class="lead-detail-label">Email</div><div class="lead-detail-value"><a href="mailto:' + (lead.email || '') + '" style="color:var(--accent)">' + (lead.email || 'N/A') + '</a></div></div>' +
+        '<div class="lead-detail-row"><div class="lead-detail-label">Service</div><div class="lead-detail-value">' + (lead.service || 'General') + '</div></div>' +
+        '<div class="lead-detail-row"><div class="lead-detail-label">Message</div><div class="lead-detail-value">' + (lead.message || 'No message provided') + '</div></div>' +
+        '<div class="lead-detail-row"><div class="lead-detail-label">Date</div><div class="lead-detail-value">' + date.toLocaleDateString('en-GB') + ' at ' + date.toLocaleTimeString('en-GB') + '</div></div>' +
+        '<div class="lead-detail-row"><div class="lead-detail-label">Status</div><div class="lead-detail-value"><span class="lead-status ' + lead.status + '">' + lead.status + '</span></div></div>' +
+        '<div style="margin-top:20px; text-align:center;">' +
+          '<button onclick="closeModal()" class="btn btn-primary btn-sm">Close</button>' +
+        '</div>';
+
+      document.getElementById('leadModal').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('leadModal').classList.remove('open');
+    }
+
+    document.getElementById('leadModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    function deleteLead(id) {
+      if (!confirm('Are you sure you want to delete this lead?')) return;
+      let leads = getLeads();
+      leads = leads.filter(l => l.id !== id);
+      saveLeads(leads);
+      renderLeads();
+    }
+
+    function clearAllLeads() {
+      if (!confirm('Are you sure you want to delete ALL leads? This cannot be undone.')) return;
+      localStorage.removeItem('ab_construction_leads');
+      renderLeads();
+    }
+
+    function exportLeads() {
+      const leads = getLeads();
+      if (leads.length === 0) {
+        alert('No leads to export.');
+        return;
+      }
+
+      const headers = ['Date', 'Name', 'Phone', 'Email', 'Service', 'Message', 'Status'];
+      const rows = leads.map(function(lead) {
+        const date = new Date(lead.date);
+        return [
+          date.toLocaleDateString('en-GB') + ' ' + date.toLocaleTimeString('en-GB'),
+          lead.name || '',
+          lead.phone || '',
+          lead.email || '',
+          lead.service || '',
+          (lead.message || '').replace(/"/g, '""'),
+          lead.status || ''
+        ].map(function(val) { return '"' + val + '"'; }).join(',');
+      });
+
+      const csv = headers.join(',') + '\n' + rows.join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'ab-construction-leads-' + new Date().toISOString().split('T')[0] + '.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function addDemoLeads() {
+      const demoLeads = [
+        { name: 'John Smith', phone: '07700 900123', email: 'john.smith@email.com', service: 'Extensions', message: 'Looking for a single-storey rear extension, approximately 4m x 6m. Currently have a small kitchen and want to create an open-plan kitchen-diner.', id: Date.now(), date: new Date().toISOString(), status: 'new' },
+        { name: 'Sarah Johnson', phone: '07700 900456', email: 'sarah.j@email.com', service: 'Loft Conversions', message: 'Interested in converting our loft into a master bedroom with en-suite. Semi-detached house in Swadlincote.', id: Date.now() + 1, date: new Date(Date.now() - 86400000).toISOString(), status: 'new' },
+        { name: 'David Williams', phone: '07700 900789', email: 'david.w@email.com', service: 'Kitchens', message: 'Need a complete kitchen renovation. Current kitchen is dated and we want a modern, handleless design with quartz worktops.', id: Date.now() + 2, date: new Date(Date.now() - 172800000).toISOString(), status: 'contacted' },
+        { name: 'Emma Brown', phone: '07700 900321', email: 'emma.b@email.com', service: 'Bathrooms', message: 'Want to convert our old bathroom into a modern wet room. Also interested in adding a downstairs toilet.', id: Date.now() + 3, date: new Date(Date.now() - 259200000).toISOString(), status: 'new' },
+        { name: 'Michael Taylor', phone: '07700 900654', email: 'michael.t@email.com', service: 'Brickwork', message: 'Need a new garden wall built, approximately 15 metres long and 1.8m high. Brick to match existing house.', id: Date.now() + 4, date: new Date(Date.now() - 345600000).toISOString(), status: 'contacted' }
+      ];
+
+      let leads = getLeads();
+      leads = demoLeads.concat(leads);
+      saveLeads(leads);
+      renderLeads();
+    }
+  </script>
+</body>
+</html>
