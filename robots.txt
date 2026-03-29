@@ -3,3 +3,6 @@ Allow: /
 Disallow: /admin.html
 
 Sitemap: https://ab-construction-swadlincote.surge.sh/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

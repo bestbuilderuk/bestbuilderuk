@@ -1,476 +1,650 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AB Construction Ltd | Trusted Builders in Swadlincote, South Derbyshire</title>
-  <meta name="description" content="AB Construction Ltd — Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms &amp; renovation works across South Derbyshire. Free quotes — call 01283 310115.">
-  <meta name="keywords" content="builders Swadlincote, builders South Derbyshire, construction company Swadlincote, brickwork, joinery, extensions, loft conversions, kitchens, bathrooms, renovation, AB Construction, local builder Derbyshire">
-  <meta name="author" content="AB Construction Ltd">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="GB-DBY">
-  <meta name="geo.placename" content="Swadlincote">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="AB Construction Ltd | Trusted Builders in Swadlincote, South Derbyshire">
-  <meta property="og:description" content="Building Dreams, Delivering Quality. Expert construction services in Swadlincote and South Derbyshire. Brickwork, extensions, loft conversions, kitchens, bathrooms &amp; more.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ab-construction-swadlincote.surge.sh/">
-  <meta property="og:image" content="https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:site_name" content="AB Construction Ltd">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AB Construction Ltd | Trusted Builders in Swadlincote">
-  <meta name="twitter:description" content="Building Dreams, Delivering Quality. Expert construction services across Swadlincote and South Derbyshire.">
-  <meta name="twitter:image" content="https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg">
-
-  <link rel="canonical" href="https://ab-construction-swadlincote.surge.sh/">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Schema.org LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "AB Construction Ltd",
-    "description": "Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms and renovation works across South Derbyshire.",
-    "url": "https://ab-construction-swadlincote.surge.sh",
-    "telephone": ["+441283310115", "+447710280062"],
-    "email": "abconstructionltd@gmail.com",
-    "image": "https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Swadlincote",
-      "addressRegion": "Derbyshire",
-      "postalCode": "DE11",
-      "addressCountry": "GB"
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AB Construction Ltd | Trusted Builders in Swadlincote, South Derbyshire</title>
+<meta content="AB Construction Ltd — Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms &amp; renovation works across South Derbyshire. Free quotes — call 01283 310115." name="description"/>
+<meta content="builders Swadlincote, builders South Derbyshire, construction company Swadlincote, brickwork, joinery, extensions, loft conversions, kitchens, bathrooms, renovation, AB Construction, local builder Derbyshire" name="keywords"/>
+<meta content="AB Construction Ltd" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="GB-DBY" name="geo.region"/>
+<meta content="Swadlincote" name="geo.placename"/>
+<!-- Open Graph -->
+<meta content="AB Construction Ltd | Trusted Builders in Swadlincote, South Derbyshire" property="og:title"/>
+<meta content="Building Dreams, Delivering Quality. Expert construction services in Swadlincote and South Derbyshire. Brickwork, extensions, loft conversions, kitchens, bathrooms &amp; more." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://ab-construction-swadlincote.surge.sh/" property="og:url"/>
+<meta content="https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg" property="og:image"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="AB Construction Ltd" property="og:site_name"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AB Construction Ltd | Trusted Builders in Swadlincote" name="twitter:title"/>
+<meta content="Building Dreams, Delivering Quality. Expert construction services across Swadlincote and South Derbyshire." name="twitter:description"/>
+<meta content="https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg" name="twitter:image"/>
+<link href="https://ab-construction-swadlincote.surge.sh/" rel="canonical"/>
+<link href="css/style.css" rel="stylesheet"/>
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "AB Construction Ltd",
+  "description": "Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms and renovation works across South Derbyshire.",
+  "url": "https://ab-construction-swadlincote.surge.sh",
+  "telephone": [
+    "+441283310115",
+    "+447710280062"
+  ],
+  "email": "abconstructionltd@gmail.com",
+  "image": "https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Swadlincote",
+    "addressRegion": "Derbyshire",
+    "postalCode": "DE11",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.7741,
+    "longitude": -1.5568
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Swadlincote"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 52.7741,
-      "longitude": -1.5568
+    {
+      "@type": "AdministrativeArea",
+      "name": "South Derbyshire"
     },
-    "areaServed": [
-      { "@type": "City", "name": "Swadlincote" },
-      { "@type": "AdministrativeArea", "name": "South Derbyshire" },
-      { "@type": "AdministrativeArea", "name": "Derbyshire" },
-      { "@type": "City", "name": "Burton-on-Trent" },
-      { "@type": "City", "name": "Ashby-de-la-Zouch" }
-    ],
-    "priceRange": "££",
-    "openingHoursSpecification": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Derbyshire"
+    },
+    {
+      "@type": "City",
+      "name": "Burton-on-Trent"
+    },
+    {
+      "@type": "City",
+      "name": "Ashby-de-la-Zouch"
+    }
+  ],
+  "priceRange": "\u00a3\u00a3",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "50",
+    "bestRating": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Construction Services",
+    "itemListElement": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "07:00",
-        "closes": "18:00"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Brickwork"
+        }
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "14:00"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Joinery"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home Extensions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Loft Conversions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kitchen Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bathroom Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Renovation Works"
+        }
       }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "50",
-      "bestRating": "5"
+    ]
+  },
+  "sameAs": [
+    "https://www.facebook.com/abconstructionltd",
+    "https://www.yell.com/biz/ab-construction-ltd-swadlincote"
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer free quotes for building work in Swadlincote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide completely free, no-obligation quotes for all types of building and construction work across Swadlincote and South Derbyshire. Simply call us on 01283 310115 or fill in our contact form."
+      }
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Construction Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brickwork" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Joinery" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Extensions" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Loft Conversions" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Installation" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Installation" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovation Works" } }
-      ]
+    {
+      "@type": "Question",
+      "name": "Are you insured for construction work in South Derbyshire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. AB Construction Ltd is fully insured with comprehensive public liability insurance, giving you complete peace of mind on every project."
+      }
     },
-    "sameAs": []
-  }
-  </script>
+    {
+      "@type": "Question",
+      "name": "What areas do you cover as a builder in Derbyshire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We cover Swadlincote, Burton-on-Trent, Ashby-de-la-Zouch, Melbourne, Repton, Overseal, Woodville, Newhall, Church Gresley, Castle Gresley, Hartshorne, Midway, Linton, Moira, and Albert Village."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle planning permission for extensions and loft conversions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide full project management including guidance on planning permission and building regulations for South Derbyshire District Council."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has AB Construction been operating in Swadlincote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AB Construction Ltd has over 15 years of experience delivering quality building and construction services across Swadlincote and South Derbyshire, completing over 500 projects for local homeowners and businesses."
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ab-construction-swadlincote.surge.sh/"
+    }
+  ]
+}</script>
 </head>
 <body>
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-bar-left">
-        <span>📍 Swadlincote, Derbyshire, UK</span>
-        <span>⏰ Mon-Fri: 7am-6pm | Sat: 8am-2pm</span>
-      </div>
-      <div class="top-bar-right">
-        <a href="tel:01283310115" class="phone-link">📞 01283 310115</a>
-        <a href="tel:07710280062" class="phone-link">📱 07710 280062</a>
-      </div>
-    </div>
-  </div>
+<!-- Top Bar -->
+<div class="top-bar">
+<div class="container">
+<div class="top-bar-left">
+<span>📍 Swadlincote, Derbyshire, UK</span>
+<span>⏰ Mon-Fri: 7am-6pm | Sat: 8am-2pm</span>
+</div>
+<div class="top-bar-right">
+<a class="phone-link" href="tel:01283310115">📞 01283 310115</a>
+<a class="phone-link" href="tel:07710280062">📱 07710 280062</a>
+</div>
+</div>
+</div>
+<!-- Header -->
+<header class="header">
+<div class="container">
+<a class="logo" href="index.html">
+<div class="logo-text">
+<div class="company-name"><span>AB</span> CONSTRUCTION</div>
+<div class="company-sub">LTD • Building Dreams, Delivering Quality</div>
+</div>
+</a>
+<button aria-label="Toggle menu" class="menu-toggle">
+<span></span><span></span><span></span>
+</button>
+<nav class="nav">
+<ul class="nav-list">
+<li><a class="active" href="index.html">Home</a></li>
+<li>
+<a href="#">Services ▾</a>
+<div class="dropdown">
+<a href="services/brickwork.html">Brickwork</a>
+<a href="services/joinery.html">Joinery</a>
+<a href="services/extensions.html">Extensions</a>
+<a href="services/loft-conversions.html">Loft Conversions</a>
+<a href="services/kitchens.html">Kitchens</a>
+<a href="services/bathrooms.html">Bathrooms</a>
+<a href="services/renovation-works.html">Renovation Works</a>
+</div>
+</li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+<div aria-label="AB Construction Ltd building project in Swadlincote, South Derbyshire" class="hero-bg" role="img" style="background-image: url('images/hero-bg.jpg');"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Expert Builders in <span>Swadlincote</span>,<br/><span>South Derbyshire</span></h1>
+<p>AB Construction Ltd — Swadlincote's most trusted construction company. Expert brickwork, extensions, loft conversions, kitchens, bathrooms, and renovation works across South Derbyshire, Burton-on-Trent, and Ashby-de-la-Zouch.</p>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="#contact">Get a Free Quote</a>
+<a class="btn btn-outline" href="#services">Our Services</a>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="section" id="services">
+<div class="container">
+<div class="section-title fade-in">
+<h2>Our Construction Services in Swadlincote</h2>
+<div class="accent-line"></div>
+<p>Comprehensive construction services delivered with expertise and care across Swadlincote, South Derbyshire and the surrounding areas.</p>
+</div>
+<div class="services-grid">
+<div class="service-card fade-in">
+<div class="service-card-icon">🧱</div>
+<div class="service-card-body">
+<h3>Brickwork</h3>
+<p>Expert bricklaying, stonework, and blockwork for new builds, repairs, and extensions. Quality craftsmanship guaranteed across Swadlincote.</p>
+<a class="btn btn-primary btn-sm" href="services/brickwork.html">Learn More</a>
+</div>
+</div>
+<div class="service-card fade-in">
+<div class="service-card-icon">🪚</div>
+<div class="service-card-body">
+<h3>Joinery</h3>
+<p>Custom woodwork, carpentry, doors, windows, staircases, and bespoke joinery solutions for homes and businesses in South Derbyshire.</p>
+<a class="btn btn-primary btn-sm" href="services/joinery.html">Learn More</a>
+</div>
+</div>
+<div class="service-card fade-in">
+<div class="service-card-icon">🏠</div>
+<div class="service-card-body">
+<h3>Extensions</h3>
+<p>Single and double-storey <a href="blog/home-extensions-swadlincote.html" style="color:var(--accent);">home extensions in Swadlincote</a> that add space and value. Full project management included.</p>
+<a class="btn btn-primary btn-sm" href="services/extensions.html">Learn More</a>
+</div>
+</div>
+<div class="service-card fade-in">
+<div class="service-card-icon">🏗️</div>
+<div class="service-card-body">
+<h3>Loft Conversions</h3>
+<p>Transform unused loft space into beautiful bedrooms, offices, or living areas. <a href="blog/loft-conversion-cost-derbyshire.html" style="color:var(--accent);">See loft conversion costs in Derbyshire</a>.</p>
+<a class="btn btn-primary btn-sm" href="services/loft-conversions.html">Learn More</a>
+</div>
+</div>
+<div class="service-card fade-in">
+<div class="service-card-icon">🍳</div>
+<div class="service-card-body">
+<h3>Kitchens</h3>
+<p>Complete kitchen design and installation. From modern contemporary to classic traditional styles. <a href="blog/kitchen-renovation-ideas-uk.html" style="color:var(--accent);">Get kitchen renovation ideas</a>.</p>
+<a class="btn btn-primary btn-sm" href="services/kitchens.html">Learn More</a>
+</div>
+</div>
+<div class="service-card fade-in">
+<div class="service-card-icon">🛁</div>
+<div class="service-card-body">
+<h3>Bathrooms</h3>
+<p>Luxury bathroom design, fitting, and refurbishment. Create your perfect bathroom sanctuary in your Derbyshire home.</p>
+<a class="btn btn-primary btn-sm" href="services/bathrooms.html">Learn More</a>
+</div>
+</div>
+<div class="service-card fade-in">
+<div class="service-card-icon">🔨</div>
+<div class="service-card-body">
+<h3>Renovation Works</h3>
+<p>Complete property renovations and refurbishments. Breathing new life into tired properties across South Derbyshire.</p>
+<a class="btn btn-primary btn-sm" href="services/renovation-works.html">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="stats-section">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item fade-in">
+<h3 class="counter" data-suffix="+" data-target="500">0</h3>
+<p>Projects Completed</p>
+</div>
+<div class="stat-item fade-in">
+<h3 class="counter" data-suffix="+" data-target="15">0</h3>
+<p>Years Experience</p>
+</div>
+<div class="stat-item fade-in">
+<h3 class="counter" data-suffix="%" data-target="100">0</h3>
+<p>Client Satisfaction</p>
+</div>
+<div class="stat-item fade-in">
+<h3 class="counter" data-suffix="+" data-target="50">0</h3>
+<p>5-Star Reviews</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="section section-dark" id="about">
+<div class="container">
+<div class="section-title fade-in">
+<h2>Why Choose AB Construction?</h2>
+<div class="accent-line"></div>
+<p>We're not just builders — we're craftsmen dedicated to delivering exceptional results on every project. <a href="blog/why-choose-local-builder-south-derbyshire.html" style="color:var(--accent-light);">Read why local builders matter</a>.</p>
+</div>
+<div class="features-grid">
+<div class="feature-item fade-in">
+<div class="feature-icon">🏆</div>
+<h3>Quality Workmanship</h3>
+<p>Every project is completed to the highest standards using premium materials and skilled tradesmen.</p>
+</div>
+<div class="feature-item fade-in">
+<div class="feature-icon">💰</div>
+<h3>Transparent Pricing</h3>
+<p>No hidden costs or surprises. We provide detailed, honest quotes before any work begins.</p>
+</div>
+<div class="feature-item fade-in">
+<div class="feature-icon">⏰</div>
+<h3>On Time, Every Time</h3>
+<p>We respect your time and stick to agreed schedules. Your project will be completed when promised.</p>
+</div>
+<div class="feature-item fade-in">
+<div class="feature-icon">🛡️</div>
+<h3>Fully Insured</h3>
+<p>Complete peace of mind with comprehensive insurance coverage on all our projects.</p>
+</div>
+<div class="feature-item fade-in">
+<div class="feature-icon">🤝</div>
+<h3>Local &amp; Trusted</h3>
+<p>Based in Swadlincote, we've built our reputation on trust, reliability, and outstanding results across South Derbyshire.</p>
+</div>
+<div class="feature-item fade-in">
+<div class="feature-icon">📋</div>
+<h3>Full Project Management</h3>
+<p>From planning to completion, we manage every aspect of your project so you don't have to worry.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="section section-light" id="testimonials">
+<div class="container">
+<div class="section-title fade-in">
+<h2>What Our Clients Say</h2>
+<div class="accent-line"></div>
+<p>Don't just take our word for it — hear from our satisfied customers across Swadlincote, Burton-on-Trent, and South Derbyshire.</p>
+</div>
+<div class="testimonials-grid">
+<div class="testimonial-card fade-in">
+<div class="testimonial-stars">★★★★★</div>
+<p>"AB Construction did an amazing job on our rear extension. Professional from start to finish, and the quality of work was outstanding. They managed everything including planning and building regs. Highly recommend to anyone in Swadlincote!"</p>
+<div class="testimonial-author">— Sarah M., Swadlincote</div>
+</div>
+<div class="testimonial-card fade-in">
+<div class="testimonial-stars">★★★★★</div>
+<p>"We had our loft converted into a master bedroom and en-suite. The team were brilliant — tidy, punctual, and the finish is incredible. Best builders in South Derbyshire without a doubt. Couldn't be happier!"</p>
+<div class="testimonial-author">— James T., Burton-on-Trent</div>
+</div>
+<div class="testimonial-card fade-in">
+<div class="testimonial-stars">★★★★★</div>
+<p>"From the initial quote to the final handover, everything was seamless. Our new kitchen is absolutely stunning. The attention to detail was second to none. Thank you AB Construction!"</p>
+<div class="testimonial-author">— Emma &amp; David R., Ashby-de-la-Zouch</div>
+</div>
+<div class="testimonial-card fade-in">
+<div class="testimonial-stars">★★★★★</div>
+<p>"We used AB Construction for a complete bathroom renovation and couldn't be more pleased. They arrived on time every day, kept the house clean, and delivered a beautiful result. Excellent value for money."</p>
+<div class="testimonial-author">— Mark &amp; Lisa P., Woodville</div>
+</div>
+<div class="testimonial-card fade-in">
+<div class="testimonial-stars">★★★★★</div>
+<p>"Had extensive brickwork and joinery done on our period property. AB Construction understood exactly what we wanted and matched the existing character perfectly. True craftsmen who take pride in their work."</p>
+<div class="testimonial-author">— Robert H., Overseal</div>
+</div>
+<div class="testimonial-card fade-in">
+<div class="testimonial-stars">★★★★★</div>
+<p>"AB Construction transformed our tired 1970s house into a modern family home. The full renovation was completed on time and on budget. Communication throughout was excellent. Would use again in a heartbeat!"</p>
+<div class="testimonial-author">— Karen &amp; Steve W., Newhall</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact / Lead Capture Section -->
+<section class="section section-dark" id="contact">
+<div class="container">
+<div class="section-title fade-in">
+<h2>Get Your Free Quote</h2>
+<div class="accent-line"></div>
+<p>Ready to start your project? Fill in the form below and we'll get back to you within 24 hours with a free, no-obligation quote.</p>
+</div>
+<div class="contact-form fade-in">
+<h3>Request a Free Quote</h3>
+<form action="https://formsubmit.co/ajax/abconstructionltd@gmail.com" class="lead-capture-form" id="homeContactForm" method="POST">
+<input name="_subject" type="hidden" value="New Lead from AB Construction Website - Homepage"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_honey" style="display:none" type="text"/>
+<div class="form-row">
+<div class="form-group">
+<label for="home-name">Full Name *</label>
+<input id="home-name" name="name" placeholder="Your full name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="home-phone">Phone Number *</label>
+<input id="home-phone" name="phone" placeholder="Your phone number" required="" type="tel"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="home-email">Email Address *</label>
+<input id="home-email" name="email" placeholder="Your email address" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="home-service">Service Required *</label>
+<select id="home-service" name="service" required="">
+<option value="">Select a service...</option>
+<option value="Brickwork">Brickwork</option>
+<option value="Joinery">Joinery</option>
+<option value="Extensions">Extensions</option>
+<option value="Loft Conversions">Loft Conversions</option>
+<option value="Kitchens">Kitchens</option>
+<option value="Bathrooms">Bathrooms</option>
+<option value="Renovation Works">Renovation Works</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label for="home-message">Project Details</label>
+<textarea id="home-message" name="message" placeholder="Tell us about your project — what are you looking to achieve?"></textarea>
+</div>
+<div class="form-submit">
+<button class="btn btn-primary" type="submit">Send Enquiry</button>
+</div>
+</form>
+<div class="form-success">
+<h4>✅ Thank You!</h4>
+<p>Your enquiry has been received. We'll be in touch within 24 hours.</p>
+<p>Or call us now: <strong><a href="tel:01283310115" style="color:var(--accent)">01283 310115</a></strong></p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="cta-section">
+<div class="container">
+<h2>Ready to Start Your Project?</h2>
+<p>Call us today for a free, no-obligation quote. We're here to help bring your vision to life.</p>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="tel:01283310115">📞 Call 01283 310115</a>
+<a class="btn btn-outline" href="tel:07710280062">📱 Call 07710 280062</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <div class="logo-text">
-          <div class="company-name"><span>AB</span> CONSTRUCTION</div>
-          <div class="company-sub">LTD &bull; Building Dreams, Delivering Quality</div>
-        </div>
-      </a>
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li>
-            <a href="#">Services ▾</a>
-            <div class="dropdown">
-              <a href="services/brickwork.html">Brickwork</a>
-              <a href="services/joinery.html">Joinery</a>
-              <a href="services/extensions.html">Extensions</a>
-              <a href="services/loft-conversions.html">Loft Conversions</a>
-              <a href="services/kitchens.html">Kitchens</a>
-              <a href="services/bathrooms.html">Bathrooms</a>
-              <a href="services/renovation-works.html">Renovation Works</a>
-            </div>
-          </li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="index.html#about">About Us</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<section class="section section-dark" id="faq">
+<div class="container">
+<div class="section-title fade-in">
+<h2>Frequently Asked Questions</h2>
+<div class="accent-line"></div>
+<p>Common questions from our customers in Swadlincote and South Derbyshire.</p>
+</div>
+<div class="faq-grid" style="max-width: 800px; margin: 0 auto;">
+<div class="faq-item" style="margin-bottom: 25px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent);">
+<h3 style="font-size: 1.05rem; margin-bottom: 10px; color: var(--accent);">Do you offer free quotes for building work in Swadlincote?</h3>
+<p style="margin: 0; color: var(--gray-300);">Yes, we provide completely free, no-obligation quotes for all types of building and construction work across Swadlincote and South Derbyshire. Simply call us on 01283 310115 or fill in our contact form.</p>
+</div>
+<div class="faq-item" style="margin-bottom: 25px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent);">
+<h3 style="font-size: 1.05rem; margin-bottom: 10px; color: var(--accent);">Are you insured for construction work in South Derbyshire?</h3>
+<p style="margin: 0; color: var(--gray-300);">Absolutely. AB Construction Ltd is fully insured with comprehensive public liability insurance, giving you complete peace of mind on every project.</p>
+</div>
+<div class="faq-item" style="margin-bottom: 25px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent);">
+<h3 style="font-size: 1.05rem; margin-bottom: 10px; color: var(--accent);">What areas do you cover as a builder in Derbyshire?</h3>
+<p style="margin: 0; color: var(--gray-300);">We cover Swadlincote, Burton-on-Trent, Ashby-de-la-Zouch, Melbourne, Repton, Overseal, Woodville, Newhall, Church Gresley, Castle Gresley, Hartshorne, Midway, Linton, Moira, and Albert Village.</p>
+</div>
+<div class="faq-item" style="margin-bottom: 25px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent);">
+<h3 style="font-size: 1.05rem; margin-bottom: 10px; color: var(--accent);">Do you handle planning permission for extensions and loft conversions?</h3>
+<p style="margin: 0; color: var(--gray-300);">Yes. We provide full project management including guidance on planning permission and building regulations for South Derbyshire District Council. We'll advise you on what's required for your specific project.</p>
+</div>
+<div class="faq-item" style="margin-bottom: 25px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent);">
+<h3 style="font-size: 1.05rem; margin-bottom: 10px; color: var(--accent);">How long has AB Construction been operating in Swadlincote?</h3>
+<p style="margin: 0; color: var(--gray-300);">AB Construction Ltd has over 15 years of experience delivering quality building and construction services across Swadlincote and South Derbyshire. We have completed over 500 projects for local homeowners and businesses.</p>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-bg.jpg');" role="img" aria-label="AB Construction Ltd building project in Swadlincote, South Derbyshire"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Building <span>Dreams</span>,<br>Delivering <span>Quality</span></h1>
-      <p>Swadlincote's most trusted construction company. From extensions to full renovations, we bring your vision to life with expert craftsmanship across South Derbyshire.</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-        <a href="#services" class="btn btn-outline">Our Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-title fade-in">
-        <h2>Our Construction Services in Swadlincote</h2>
-        <div class="accent-line"></div>
-        <p>Comprehensive construction services delivered with expertise and care across Swadlincote, South Derbyshire and the surrounding areas.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card fade-in">
-          <div class="service-card-icon">🧱</div>
-          <div class="service-card-body">
-            <h3>Brickwork</h3>
-            <p>Expert bricklaying, stonework, and blockwork for new builds, repairs, and extensions. Quality craftsmanship guaranteed across Swadlincote.</p>
-            <a href="services/brickwork.html" class="btn btn-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="service-card fade-in">
-          <div class="service-card-icon">🪚</div>
-          <div class="service-card-body">
-            <h3>Joinery</h3>
-            <p>Custom woodwork, carpentry, doors, windows, staircases, and bespoke joinery solutions for homes and businesses in South Derbyshire.</p>
-            <a href="services/joinery.html" class="btn btn-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="service-card fade-in">
-          <div class="service-card-icon">🏠</div>
-          <div class="service-card-body">
-            <h3>Extensions</h3>
-            <p>Single and double-storey <a href="blog/home-extensions-swadlincote.html" style="color:var(--accent);">home extensions in Swadlincote</a> that add space and value. Full project management included.</p>
-            <a href="services/extensions.html" class="btn btn-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="service-card fade-in">
-          <div class="service-card-icon">🏗️</div>
-          <div class="service-card-body">
-            <h3>Loft Conversions</h3>
-            <p>Transform unused loft space into beautiful bedrooms, offices, or living areas. <a href="blog/loft-conversion-cost-derbyshire.html" style="color:var(--accent);">See loft conversion costs in Derbyshire</a>.</p>
-            <a href="services/loft-conversions.html" class="btn btn-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="service-card fade-in">
-          <div class="service-card-icon">🍳</div>
-          <div class="service-card-body">
-            <h3>Kitchens</h3>
-            <p>Complete kitchen design and installation. From modern contemporary to classic traditional styles. <a href="blog/kitchen-renovation-ideas-uk.html" style="color:var(--accent);">Get kitchen renovation ideas</a>.</p>
-            <a href="services/kitchens.html" class="btn btn-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="service-card fade-in">
-          <div class="service-card-icon">🛁</div>
-          <div class="service-card-body">
-            <h3>Bathrooms</h3>
-            <p>Luxury bathroom design, fitting, and refurbishment. Create your perfect bathroom sanctuary in your Derbyshire home.</p>
-            <a href="services/bathrooms.html" class="btn btn-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="service-card fade-in">
-          <div class="service-card-icon">🔨</div>
-          <div class="service-card-body">
-            <h3>Renovation Works</h3>
-            <p>Complete property renovations and refurbishments. Breathing new life into tired properties across South Derbyshire.</p>
-            <a href="services/renovation-works.html" class="btn btn-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item fade-in">
-          <h3 class="counter" data-target="500" data-suffix="+">0</h3>
-          <p>Projects Completed</p>
-        </div>
-        <div class="stat-item fade-in">
-          <h3 class="counter" data-target="15" data-suffix="+">0</h3>
-          <p>Years Experience</p>
-        </div>
-        <div class="stat-item fade-in">
-          <h3 class="counter" data-target="100" data-suffix="%">0</h3>
-          <p>Client Satisfaction</p>
-        </div>
-        <div class="stat-item fade-in">
-          <h3 class="counter" data-target="50" data-suffix="+">0</h3>
-          <p>5-Star Reviews</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="section section-dark" id="about">
-    <div class="container">
-      <div class="section-title fade-in">
-        <h2>Why Choose AB Construction?</h2>
-        <div class="accent-line"></div>
-        <p>We're not just builders — we're craftsmen dedicated to delivering exceptional results on every project. <a href="blog/why-choose-local-builder-south-derbyshire.html" style="color:var(--accent-light);">Read why local builders matter</a>.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-item fade-in">
-          <div class="feature-icon">🏆</div>
-          <h3>Quality Workmanship</h3>
-          <p>Every project is completed to the highest standards using premium materials and skilled tradesmen.</p>
-        </div>
-        <div class="feature-item fade-in">
-          <div class="feature-icon">💰</div>
-          <h3>Transparent Pricing</h3>
-          <p>No hidden costs or surprises. We provide detailed, honest quotes before any work begins.</p>
-        </div>
-        <div class="feature-item fade-in">
-          <div class="feature-icon">⏰</div>
-          <h3>On Time, Every Time</h3>
-          <p>We respect your time and stick to agreed schedules. Your project will be completed when promised.</p>
-        </div>
-        <div class="feature-item fade-in">
-          <div class="feature-icon">🛡️</div>
-          <h3>Fully Insured</h3>
-          <p>Complete peace of mind with comprehensive insurance coverage on all our projects.</p>
-        </div>
-        <div class="feature-item fade-in">
-          <div class="feature-icon">🤝</div>
-          <h3>Local &amp; Trusted</h3>
-          <p>Based in Swadlincote, we've built our reputation on trust, reliability, and outstanding results across South Derbyshire.</p>
-        </div>
-        <div class="feature-item fade-in">
-          <div class="feature-icon">📋</div>
-          <h3>Full Project Management</h3>
-          <p>From planning to completion, we manage every aspect of your project so you don't have to worry.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="section section-light" id="testimonials">
-    <div class="container">
-      <div class="section-title fade-in">
-        <h2>What Our Clients Say</h2>
-        <div class="accent-line"></div>
-        <p>Don't just take our word for it — hear from our satisfied customers across Swadlincote, Burton-on-Trent, and South Derbyshire.</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"AB Construction did an amazing job on our rear extension. Professional from start to finish, and the quality of work was outstanding. They managed everything including planning and building regs. Highly recommend to anyone in Swadlincote!"</p>
-          <div class="testimonial-author">— Sarah M., Swadlincote</div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"We had our loft converted into a master bedroom and en-suite. The team were brilliant — tidy, punctual, and the finish is incredible. Best builders in South Derbyshire without a doubt. Couldn't be happier!"</p>
-          <div class="testimonial-author">— James T., Burton-on-Trent</div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"From the initial quote to the final handover, everything was seamless. Our new kitchen is absolutely stunning. The attention to detail was second to none. Thank you AB Construction!"</p>
-          <div class="testimonial-author">— Emma &amp; David R., Ashby-de-la-Zouch</div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"We used AB Construction for a complete bathroom renovation and couldn't be more pleased. They arrived on time every day, kept the house clean, and delivered a beautiful result. Excellent value for money."</p>
-          <div class="testimonial-author">— Mark &amp; Lisa P., Woodville</div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Had extensive brickwork and joinery done on our period property. AB Construction understood exactly what we wanted and matched the existing character perfectly. True craftsmen who take pride in their work."</p>
-          <div class="testimonial-author">— Robert H., Overseal</div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"AB Construction transformed our tired 1970s house into a modern family home. The full renovation was completed on time and on budget. Communication throughout was excellent. Would use again in a heartbeat!"</p>
-          <div class="testimonial-author">— Karen &amp; Steve W., Newhall</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact / Lead Capture Section -->
-  <section class="section section-dark" id="contact">
-    <div class="container">
-      <div class="section-title fade-in">
-        <h2>Get Your Free Quote</h2>
-        <div class="accent-line"></div>
-        <p>Ready to start your project? Fill in the form below and we'll get back to you within 24 hours with a free, no-obligation quote.</p>
-      </div>
-      <div class="contact-form fade-in">
-        <h3>Request a Free Quote</h3>
-        <form id="homeContactForm" class="lead-capture-form" action="https://formsubmit.co/ajax/abconstructionltd@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Lead from AB Construction Website - Homepage">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="home-name">Full Name *</label>
-              <input type="text" id="home-name" name="name" required placeholder="Your full name">
-            </div>
-            <div class="form-group">
-              <label for="home-phone">Phone Number *</label>
-              <input type="tel" id="home-phone" name="phone" required placeholder="Your phone number">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="home-email">Email Address *</label>
-              <input type="email" id="home-email" name="email" required placeholder="Your email address">
-            </div>
-            <div class="form-group">
-              <label for="home-service">Service Required *</label>
-              <select id="home-service" name="service" required>
-                <option value="">Select a service...</option>
-                <option value="Brickwork">Brickwork</option>
-                <option value="Joinery">Joinery</option>
-                <option value="Extensions">Extensions</option>
-                <option value="Loft Conversions">Loft Conversions</option>
-                <option value="Kitchens">Kitchens</option>
-                <option value="Bathrooms">Bathrooms</option>
-                <option value="Renovation Works">Renovation Works</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="home-message">Project Details</label>
-            <textarea id="home-message" name="message" placeholder="Tell us about your project — what are you looking to achieve?"></textarea>
-          </div>
-          <div class="form-submit">
-            <button type="submit" class="btn btn-primary">Send Enquiry</button>
-          </div>
-        </form>
-        <div class="form-success">
-          <h4>✅ Thank You!</h4>
-          <p>Your enquiry has been received. We'll be in touch within 24 hours.</p>
-          <p>Or call us now: <strong><a href="tel:01283310115" style="color:var(--accent)">01283 310115</a></strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Start Your Project?</h2>
-      <p>Call us today for a free, no-obligation quote. We're here to help bring your vision to life.</p>
-      <div class="hero-buttons">
-        <a href="tel:01283310115" class="btn btn-primary">📞 Call 01283 310115</a>
-        <a href="tel:07710280062" class="btn btn-outline">📱 Call 07710 280062</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>AB Construction Ltd</h4>
-          <p>Building Dreams, Delivering Quality. We are Swadlincote's trusted construction company, delivering expert building services with pride and professionalism.</p>
-          <p>From small repairs to large-scale renovations, no project is too big or too small for our experienced team.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="services/brickwork.html">Brickwork</a></li>
-            <li><a href="services/joinery.html">Joinery</a></li>
-            <li><a href="services/extensions.html">Extensions</a></li>
-            <li><a href="services/loft-conversions.html">Loft Conversions</a></li>
-            <li><a href="services/kitchens.html">Kitchens</a></li>
-            <li><a href="services/bathrooms.html">Bathrooms</a></li>
-            <li><a href="services/renovation-works.html">Renovation Works</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <div class="footer-contact-item">
-            <span class="icon">📍</span>
-            <span>Swadlincote, Derbyshire, UK</span>
-          </div>
-          <div class="footer-contact-item">
-            <span class="icon">📞</span>
-            <span><a href="tel:01283310115">01283 310115</a></span>
-          </div>
-          <div class="footer-contact-item">
-            <span class="icon">📱</span>
-            <span><a href="tel:07710280062">07710 280062</a></span>
-          </div>
-          <div class="footer-contact-item">
-            <span class="icon">⏰</span>
-            <span>Mon-Fri: 7am-6pm<br>Sat: 8am-2pm</span>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 AB Construction Ltd. All rights reserved. | Builders in Swadlincote, Derbyshire</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+<section class="section" id="areas-we-serve" style="background-color: #f8f9fa;">
+<div class="container">
+<div class="section-title fade-in">
+<h2>Areas We Serve in South Derbyshire</h2>
+<div class="accent-line"></div>
+<p>AB Construction Ltd provides expert building and construction services across Swadlincote and the surrounding areas of South Derbyshire.</p>
+</div>
+<div class="features-grid" style="margin-top: 30px;">
+<div class="feature-item fade-in" style="text-align:center;">
+<div class="feature-icon">📍</div>
+<h3>Swadlincote</h3>
+<p>Our home base. We've completed hundreds of projects across Swadlincote, Woodville, Newhall, and Church Gresley.</p>
+</div>
+<div class="feature-item fade-in" style="text-align:center;">
+<div class="feature-icon">📍</div>
+<h3>Burton-on-Trent</h3>
+<p>Serving homeowners and businesses across Burton-on-Trent and the surrounding Staffordshire border areas.</p>
+</div>
+<div class="feature-item fade-in" style="text-align:center;">
+<div class="feature-icon">📍</div>
+<h3>Ashby-de-la-Zouch</h3>
+<p>Providing quality construction services to homes and properties across Ashby-de-la-Zouch and North West Leicestershire.</p>
+</div>
+<div class="feature-item fade-in" style="text-align:center;">
+<div class="feature-icon">📍</div>
+<h3>South Derbyshire Villages</h3>
+<p>We also serve Melbourne, Repton, Overseal, Castle Gresley, Hartshorne, Midway, Linton, Moira, and Albert Village.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<h4>AB Construction Ltd</h4>
+<p>Building Dreams, Delivering Quality. We are Swadlincote's trusted construction company, delivering expert building services with pride and professionalism.</p>
+<p>From small repairs to large-scale renovations, no project is too big or too small for our experienced team.</p>
+</div>
+<div class="footer-col">
+<h4>Our Services</h4>
+<ul>
+<li><a href="services/brickwork.html">Brickwork</a></li>
+<li><a href="services/joinery.html">Joinery</a></li>
+<li><a href="services/extensions.html">Extensions</a></li>
+<li><a href="services/loft-conversions.html">Loft Conversions</a></li>
+<li><a href="services/kitchens.html">Kitchens</a></li>
+<li><a href="services/bathrooms.html">Bathrooms</a></li>
+<li><a href="services/renovation-works.html">Renovation Works</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#contact">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contact Us</h4>
+<div class="footer-contact-item">
+<span class="icon">📍</span>
+<span>Swadlincote, Derbyshire, UK</span>
+</div>
+<div class="footer-contact-item">
+<span class="icon">📞</span>
+<span><a href="tel:01283310115">01283 310115</a></span>
+</div>
+<div class="footer-contact-item">
+<span class="icon">📱</span>
+<span><a href="tel:07710280062">07710 280062</a></span>
+</div>
+<div class="footer-contact-item">
+<span class="icon">⏰</span>
+<span>Mon-Fri: 7am-6pm<br/>Sat: 8am-2pm</span>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 AB Construction Ltd. All rights reserved. | Expert Builders in Swadlincote, South Derbyshire</p>
+</div>
+</div>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
