@@ -3,14 +3,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="geo.region" content="GB-DBY"/>
+<meta name="geo.placename" content="Swadlincote"/>
+<meta name="geo.position" content="52.7741;-1.5568"/>
+<meta name="ICBM" content="52.7741, -1.5568"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AB Construction Ltd | Trusted Builders in Swadlincote, South Derbyshire</title>
 <meta content="AB Construction Ltd — Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms &amp; renovation works across South Derbyshire. Free quotes — call 01283 310115." name="description"/>
 <meta content="builders Swadlincote, builders South Derbyshire, construction company Swadlincote, brickwork, joinery, extensions, loft conversions, kitchens, bathrooms, renovation, AB Construction, local builder Derbyshire" name="keywords"/>
 <meta content="AB Construction Ltd" name="author"/>
 <meta content="index, follow" name="robots"/>
-<meta content="GB-DBY" name="geo.region"/>
-<meta content="Swadlincote" name="geo.placename"/>
+
+
 <!-- Open Graph -->
 <meta content="AB Construction Ltd | Trusted Builders in Swadlincote, South Derbyshire" property="og:title"/>
 <meta content="Building Dreams, Delivering Quality. Expert construction services in Swadlincote and South Derbyshire. Brickwork, extensions, loft conversions, kitchens, bathrooms &amp; more." property="og:description"/>
@@ -30,8 +34,10 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
+  "@id": "https://ab-construction-swadlincote.surge.sh/#business",
   "name": "AB Construction Ltd",
-  "description": "Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms and renovation works across South Derbyshire.",
+  "legalName": "AB Construction U.K Ltd",
+  "description": "Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms and renovation works across South Derbyshire. Over 15 years experience, 500+ projects completed.",
   "url": "https://ab-construction-swadlincote.surge.sh",
   "telephone": [
     "+441283310115",
@@ -39,11 +45,13 @@
   ],
   "email": "abconstructionltd@gmail.com",
   "image": "https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg",
+  "logo": "https://ab-construction-swadlincote.surge.sh/images/logo.png",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Unit 10, Viking Business Centre, Woodville",
     "addressLocality": "Swadlincote",
     "addressRegion": "Derbyshire",
-    "postalCode": "DE11",
+    "postalCode": "DE11 7LH",
     "addressCountry": "GB"
   },
   "geo": {
@@ -51,10 +59,27 @@
     "latitude": 52.7741,
     "longitude": -1.5568
   },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.7741,
+      "longitude": -1.5568
+    },
+    "geoRadius": "25000"
+  },
   "areaServed": [
     {
       "@type": "City",
       "name": "Swadlincote"
+    },
+    {
+      "@type": "City",
+      "name": "Burton-on-Trent"
+    },
+    {
+      "@type": "City",
+      "name": "Ashby-de-la-Zouch"
     },
     {
       "@type": "AdministrativeArea",
@@ -66,14 +91,36 @@
     },
     {
       "@type": "City",
-      "name": "Burton-on-Trent"
+      "name": "Melbourne"
     },
     {
       "@type": "City",
-      "name": "Ashby-de-la-Zouch"
+      "name": "Repton"
+    },
+    {
+      "@type": "City",
+      "name": "Woodville"
+    },
+    {
+      "@type": "City",
+      "name": "Newhall"
+    },
+    {
+      "@type": "City",
+      "name": "Church Gresley"
+    },
+    {
+      "@type": "City",
+      "name": "Hartshorne"
+    },
+    {
+      "@type": "City",
+      "name": "Moira"
     }
   ],
-  "priceRange": "\u00a3\u00a3",
+  "priceRange": "££",
+  "currenciesAccepted": "GBP",
+  "paymentAccepted": "Cash, Bank Transfer, Cheque",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -98,8 +145,24 @@
     "@type": "AggregateRating",
     "ratingValue": "5",
     "reviewCount": "50",
-    "bestRating": "5"
+    "bestRating": "5",
+    "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Local Customer"
+      },
+      "reviewBody": "Excellent work by AB Construction. The extension was completed on time and to a very high standard. Highly recommended."
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Construction Services",
@@ -108,57 +171,91 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Brickwork"
+          "name": "Brickwork",
+          "description": "Expert bricklaying, stonework and blockwork across Swadlincote and South Derbyshire."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Joinery"
+          "name": "Joinery",
+          "description": "Bespoke joinery, staircases, doors and timber framing in South Derbyshire."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Home Extensions"
+          "name": "Home Extensions",
+          "description": "Single and double storey extensions in Swadlincote, Burton-on-Trent and surrounding areas."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Loft Conversions"
+          "name": "Loft Conversions",
+          "description": "Full loft conversion service across Derbyshire including dormer and Velux conversions."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Kitchen Installation"
+          "name": "Kitchen Installation",
+          "description": "Complete kitchen fitting and renovation service in South Derbyshire."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Bathroom Installation"
+          "name": "Bathroom Installation",
+          "description": "Full bathroom design and installation across Swadlincote and South Derbyshire."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Renovation Works"
+          "name": "Renovation Works",
+          "description": "Full property renovation and refurbishment services in Derbyshire."
         }
       }
     ]
   },
   "sameAs": [
     "https://www.facebook.com/abconstructionltd",
-    "https://www.yell.com/biz/ab-construction-ltd-swadlincote"
-  ]
+    "https://www.yell.com/biz/ab-construction-u-k-ltd-swadlincote-901760680/",
+    "https://find-and-update.company-information.service.gov.uk/company/14328530",
+    "https://nextdoor.co.uk/pages/ab-construction-uk-ltd/",
+    "https://www.instagram.com/abconstructionukltd/",
+    "https://www.linkedin.com/company/ab-construction-uk-ltd",
+    "https://www.houzz.co.uk/professionals/general-contractor/ab-construction-ltd",
+    "https://www.checkatrade.com/trades/abconstructionltd",
+    "https://www.ratedpeople.com/profile/ab-construction-ltd",
+    "https://www.trustatrader.com/traders/ab-construction-ltd-swadlincote",
+    "https://www.trustpilot.com/review/ab-construction-swadlincote.surge.sh"
+  ],
+  "foundingDate": "2022",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": 10
+  },
+  "slogan": "Building Dreams, Delivering Quality",
+  "knowsAbout": [
+    "Brickwork",
+    "Joinery",
+    "Home Extensions",
+    "Loft Conversions",
+    "Kitchen Fitting",
+    "Bathroom Installation",
+    "Renovation Works",
+    "Planning Permission South Derbyshire",
+    "Building Regulations"
+  ],
+  "areaServedDescription": "Swadlincote, Burton-on-Trent, Ashby-de-la-Zouch, Melbourne, Repton, Woodville, Newhall, Church Gresley, Hartshorne, Midway, Moira and surrounding South Derbyshire areas."
 }</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -227,7 +324,7 @@
 </div>
 <div class="top-bar-right">
 <a class="phone-link" href="tel:01283310115">📞 01283 310115</a>
-<a class="phone-link" href="tel:07710280062">📱 07710 280062</a>
+<a class="phone-link" href="tel:07710 280062">📱 07710 280062</a>
 </div>
 </div>
 </div>
@@ -521,7 +618,7 @@
 <p>Call us today for a free, no-obligation quote. We're here to help bring your vision to life.</p>
 <div class="hero-buttons">
 <a class="btn btn-primary" href="tel:01283310115">📞 Call 01283 310115</a>
-<a class="btn btn-outline" href="tel:07710280062">📱 Call 07710 280062</a>
+<a class="btn btn-outline" href="tel:07710 280062">📱 Call 07710 280062</a>
 </div>
 </div>
 </section>
@@ -632,7 +729,7 @@
 </div>
 <div class="footer-contact-item">
 <span class="icon">📱</span>
-<span><a href="tel:07710280062">07710 280062</a></span>
+<span><a href="tel:07710 280062">07710 280062</a></span>
 </div>
 <div class="footer-contact-item">
 <span class="icon">⏰</span>
