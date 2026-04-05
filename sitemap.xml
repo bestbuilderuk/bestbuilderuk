@@ -19,6 +19,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/referral.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ab-construction-swadlincote.surge.sh/services/brickwork.html</loc>
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -86,6 +92,36 @@
   </url>
   <url>
     <loc>https://ab-construction-swadlincote.surge.sh/blog/home-extensions-swadlincote.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/blog/house-extension-swadlincote-guide.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/blog/loft-conversion-derbyshire-ideas.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/blog/kitchen-renovation-burton-on-trent.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/blog/local-builders-ashby-de-la-zouch.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/blog/bathroom-fitters-south-derbyshire.html</loc>
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
