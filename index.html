@@ -30,14 +30,20 @@
 <meta content="https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg" name="twitter:image"/>
 <link href="https://ab-construction-swadlincote.surge.sh/" rel="canonical"/>
 <link href="css/style.css" rel="stylesheet"/>
-<!-- Schema.org LocalBusiness -->
-<script type="application/ld+json">{
+
+
+<!-- Schema.org JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "LocalBusiness"
+  ],
   "@id": "https://ab-construction-swadlincote.surge.sh/#business",
-  "name": "AB Construction Ltd",
+  "name": "AB Construction UK Ltd",
   "legalName": "AB Construction U.K Ltd",
-  "description": "Swadlincote's most trusted builders. Expert brickwork, joinery, extensions, loft conversions, kitchens, bathrooms and renovation works across South Derbyshire. Over 15 years experience, 500+ projects completed.",
+  "description": "AB Construction UK Ltd are Swadlincote's most trusted builders. We deliver expert brickwork, joinery, home extensions, loft conversions, kitchen renovations, bathroom fitting, and full renovation works across South Derbyshire, Burton-on-Trent, Derby, and Ashby-de-la-Zouch. Over 15 years of experience and 500+ completed projects.",
   "url": "https://ab-construction-swadlincote.surge.sh",
   "telephone": [
     "+441283310115",
@@ -66,7 +72,7 @@
       "latitude": 52.7741,
       "longitude": -1.5568
     },
-    "geoRadius": "25000"
+    "geoRadius": "30000"
   },
   "areaServed": [
     {
@@ -79,7 +85,7 @@
     },
     {
       "@type": "City",
-      "name": "Ashby-de-la-Zouch"
+      "name": "Derby"
     },
     {
       "@type": "AdministrativeArea",
@@ -88,6 +94,10 @@
     {
       "@type": "AdministrativeArea",
       "name": "Derbyshire"
+    },
+    {
+      "@type": "City",
+      "name": "Ashby-de-la-Zouch"
     },
     {
       "@type": "City",
@@ -116,6 +126,14 @@
     {
       "@type": "City",
       "name": "Moira"
+    },
+    {
+      "@type": "City",
+      "name": "Overseal"
+    },
+    {
+      "@type": "City",
+      "name": "Castle Gresley"
     }
   ],
   "priceRange": "££",
@@ -137,8 +155,8 @@
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "14:00"
+      "opens": "07:00",
+      "closes": "18:00"
     }
   ],
   "aggregateRating": {
@@ -148,31 +166,21 @@
     "bestRating": "5",
     "worstRating": "1"
   },
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Local Customer"
-      },
-      "reviewBody": "Excellent work by AB Construction. The extension was completed on time and to a very high standard. Highly recommended."
-    }
-  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Construction Services",
+    "name": "Construction Services in Swadlincote & South Derbyshire",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
           "name": "Brickwork",
-          "description": "Expert bricklaying, stonework and blockwork across Swadlincote and South Derbyshire."
+          "description": "Expert bricklaying, stonework, blockwork, repointing, and brick repairs across Swadlincote and South Derbyshire.",
+          "provider": {
+            "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+          },
+          "areaServed": "South Derbyshire",
+          "url": "https://ab-construction-swadlincote.surge.sh/services/brickwork.html"
         }
       },
       {
@@ -180,7 +188,12 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Joinery",
-          "description": "Bespoke joinery, staircases, doors and timber framing in South Derbyshire."
+          "description": "Bespoke joinery, staircases, doors, windows, fitted furniture, and timber framing in South Derbyshire.",
+          "provider": {
+            "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+          },
+          "areaServed": "South Derbyshire",
+          "url": "https://ab-construction-swadlincote.surge.sh/services/joinery.html"
         }
       },
       {
@@ -188,7 +201,12 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Home Extensions",
-          "description": "Single and double storey extensions in Swadlincote, Burton-on-Trent and surrounding areas."
+          "description": "Single and double storey house extensions, side returns, wraparound extensions in Swadlincote, Burton-on-Trent, Derby, and surrounding areas.",
+          "provider": {
+            "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+          },
+          "areaServed": "South Derbyshire",
+          "url": "https://ab-construction-swadlincote.surge.sh/services/extensions.html"
         }
       },
       {
@@ -196,23 +214,38 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Loft Conversions",
-          "description": "Full loft conversion service across Derbyshire including dormer and Velux conversions."
+          "description": "Full loft conversion service across Derbyshire including dormer, Velux, hip-to-gable, and mansard conversions.",
+          "provider": {
+            "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+          },
+          "areaServed": "South Derbyshire",
+          "url": "https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Kitchen Installation",
-          "description": "Complete kitchen fitting and renovation service in South Derbyshire."
+          "name": "Kitchens",
+          "description": "Complete kitchen design, fitting, and renovation service in South Derbyshire and Burton-on-Trent.",
+          "provider": {
+            "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+          },
+          "areaServed": "South Derbyshire",
+          "url": "https://ab-construction-swadlincote.surge.sh/services/kitchens.html"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Bathroom Installation",
-          "description": "Full bathroom design and installation across Swadlincote and South Derbyshire."
+          "name": "Bathrooms",
+          "description": "Full bathroom design and installation, wet rooms, en-suites, and luxury bathroom fitting across Swadlincote and South Derbyshire.",
+          "provider": {
+            "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+          },
+          "areaServed": "South Derbyshire",
+          "url": "https://ab-construction-swadlincote.surge.sh/services/bathrooms.html"
         }
       },
       {
@@ -220,23 +253,26 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Renovation Works",
-          "description": "Full property renovation and refurbishment services in Derbyshire."
+          "description": "Full property renovation, refurbishment, and remodelling services across Derbyshire.",
+          "provider": {
+            "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+          },
+          "areaServed": "South Derbyshire",
+          "url": "https://ab-construction-swadlincote.surge.sh/services/renovation-works.html"
         }
       }
     ]
   },
   "sameAs": [
+    "https://www.tiktok.com/@abconstructionuk",
     "https://www.facebook.com/abconstructionltd",
+    "https://www.instagram.com/abconstructionukltd/",
     "https://www.yell.com/biz/ab-construction-u-k-ltd-swadlincote-901760680/",
     "https://find-and-update.company-information.service.gov.uk/company/14328530",
-    "https://nextdoor.co.uk/pages/ab-construction-uk-ltd/",
-    "https://www.instagram.com/abconstructionukltd/",
     "https://www.linkedin.com/company/ab-construction-uk-ltd",
-    "https://www.houzz.co.uk/professionals/general-contractor/ab-construction-ltd",
     "https://www.checkatrade.com/trades/abconstructionltd",
     "https://www.ratedpeople.com/profile/ab-construction-ltd",
-    "https://www.trustatrader.com/traders/ab-construction-ltd-swadlincote",
-    "https://www.trustpilot.com/review/ab-construction-swadlincote.surge.sh"
+    "https://www.trustatrader.com/traders/ab-construction-ltd-swadlincote"
   ],
   "foundingDate": "2022",
   "numberOfEmployees": {
@@ -253,10 +289,13 @@
     "Bathroom Installation",
     "Renovation Works",
     "Planning Permission South Derbyshire",
-    "Building Regulations"
-  ],
-  "areaServedDescription": "Swadlincote, Burton-on-Trent, Ashby-de-la-Zouch, Melbourne, Repton, Woodville, Newhall, Church Gresley, Hartshorne, Midway, Moira and surrounding South Derbyshire areas."
-}</script><script type="application/ld+json">{
+    "Building Regulations",
+    "Permitted Development Rights"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -265,54 +304,58 @@
       "name": "Do you offer free quotes for building work in Swadlincote?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we provide completely free, no-obligation quotes for all types of building and construction work across Swadlincote and South Derbyshire. Simply call us on 01283 310115 or fill in our contact form."
+        "text": "Yes, AB Construction UK Ltd provides completely free, no-obligation quotes for all building and construction work across Swadlincote and South Derbyshire. Call us on 01283 310115 or 07710 280062."
       }
     },
     {
       "@type": "Question",
-      "name": "Are you insured for construction work in South Derbyshire?",
+      "name": "What areas do you cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. AB Construction Ltd is fully insured with comprehensive public liability insurance, giving you complete peace of mind on every project."
+        "text": "We cover Swadlincote, Burton-on-Trent, Derby, South Derbyshire, Ashby-de-la-Zouch, Melbourne, Repton, Woodville, Newhall, Church Gresley, Hartshorne, and all surrounding areas."
       }
     },
     {
       "@type": "Question",
-      "name": "What areas do you cover as a builder in Derbyshire?",
+      "name": "How much does a house extension cost in Swadlincote?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We cover Swadlincote, Burton-on-Trent, Ashby-de-la-Zouch, Melbourne, Repton, Overseal, Woodville, Newhall, Church Gresley, Castle Gresley, Hartshorne, Midway, Linton, Moira, and Albert Village."
+        "text": "A single-storey house extension in Swadlincote typically costs between £1,800 and £2,500 per square metre in 2026. A double-storey extension offers better value per square metre. Contact AB Construction UK Ltd on 01283 310115 for a free, detailed quote."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you handle planning permission for extensions and loft conversions?",
+      "name": "How much does a loft conversion cost in Derbyshire?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We provide full project management including guidance on planning permission and building regulations for South Derbyshire District Council."
+        "text": "Loft conversion costs in Derbyshire range from £20,000 for a basic Velux conversion to £50,000+ for a full dormer conversion with en-suite. AB Construction UK Ltd provides free quotes — call 01283 310115."
       }
     },
     {
       "@type": "Question",
-      "name": "How long has AB Construction been operating in Swadlincote?",
+      "name": "Do I need planning permission for a home extension?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AB Construction Ltd has over 15 years of experience delivering quality building and construction services across Swadlincote and South Derbyshire, completing over 500 projects for local homeowners and businesses."
+        "text": "Many home extensions in South Derbyshire fall under Permitted Development Rights and do not require planning permission, provided they meet size and placement criteria. AB Construction UK Ltd can advise you on whether your project requires planning permission from South Derbyshire District Council."
       }
     }
   ]
-}</script><script type="application/ld+json">{
+}
+</script>
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://ab-construction-swadlincote.surge.sh/"
-    }
-  ]
-}</script>
+  "@type": "WebSite",
+  "@id": "https://ab-construction-swadlincote.surge.sh/#website",
+  "url": "https://ab-construction-swadlincote.surge.sh",
+  "name": "AB Construction UK Ltd",
+  "description": "Expert builders in Swadlincote, South Derbyshire — extensions, loft conversions, kitchens, bathrooms, brickwork, joinery, and renovation works.",
+  "publisher": {
+    "@id": "https://ab-construction-swadlincote.surge.sh/#business"
+  },
+  "inLanguage": "en-GB"
+}
+</script>
 </head>
 <body>
 <!-- Top Bar -->
@@ -358,6 +401,7 @@
 <li><a href="referral.html">Refer a Friend</a></li>
 <li><a href="portfolio.html">Portfolio</a></li>
 <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
 <li><a href="index.html#about">About Us</a></li>
 <li><a href="index.html#contact">Contact</a></li>
 </ul>

@@ -30,39 +30,80 @@
 <meta content="https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg" name="twitter:image"/>
 <link href="https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html" rel="canonical"/>
 <link href="../css/style.css" rel="stylesheet"/>
-<!-- Schema.org Service -->
-<script type="application/ld+json">{
+
+
+<!-- Schema.org JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "LocalBusiness"
+  ],
+  "@id": "https://ab-construction-swadlincote.surge.sh/#business",
+  "name": "AB Construction UK Ltd",
+  "url": "https://ab-construction-swadlincote.surge.sh",
+  "telephone": [
+    "+441283310115",
+    "+447710280062"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Swadlincote",
+    "addressRegion": "Derbyshire",
+    "postalCode": "DE11 7LH",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Swadlincote"
+    },
+    {
+      "@type": "City",
+      "name": "Burton-on-Trent"
+    },
+    {
+      "@type": "City",
+      "name": "Derby"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "South Derbyshire"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Loft Conversions Swadlincote",
-  "description": "Professional loft conversion services in Swadlincote and South Derbyshire. Dormer, Velux and hip-to-gable conversions. Planning permission guidance included. Free quotes — call 01283 310115.",
-  "url": "https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html",
-  "serviceType": "Loft Conversions Swadlincote",
+  "@id": "https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html#service",
+  "name": "Loft Conversions Derbyshire",
+  "serviceType": "Loft Conversions",
+  "description": "Full loft conversion service across Derbyshire. Dormer, Velux, hip-to-gable, and mansard conversions in Swadlincote, Burton-on-Trent, Derby, and South Derbyshire.",
   "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://ab-construction-swadlincote.surge.sh/#business",
-    "name": "AB Construction Ltd",
-    "telephone": [
-      "+441283310115",
-      "+447710280062"
-    ],
-    "email": "abconstructionltd@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Unit 10, Viking Business Centre, Woodville",
-      "addressLocality": "Swadlincote",
-      "addressRegion": "Derbyshire",
-      "postalCode": "DE11 7LH",
-      "addressCountry": "GB"
-    },
-    "url": "https://ab-construction-swadlincote.surge.sh",
-    "sameAs": [
-      "https://www.facebook.com/abconstructionltd",
-      "https://www.yell.com/biz/ab-construction-u-k-ltd-swadlincote-901760680/",
-      "https://find-and-update.company-information.service.gov.uk/company/14328530",
-      "https://nextdoor.co.uk/pages/ab-construction-uk-ltd/",
-      "https://www.instagram.com/abconstructionukltd/"
-    ]
+    "@id": "https://ab-construction-swadlincote.surge.sh/#business"
   },
   "areaServed": [
     {
@@ -75,7 +116,7 @@
     },
     {
       "@type": "City",
-      "name": "Ashby-de-la-Zouch"
+      "name": "Derby"
     },
     {
       "@type": "AdministrativeArea",
@@ -84,127 +125,21 @@
     {
       "@type": "AdministrativeArea",
       "name": "Derbyshire"
-    },
-    {
-      "@type": "City",
-      "name": "Melbourne"
-    },
-    {
-      "@type": "City",
-      "name": "Repton"
-    },
-    {
-      "@type": "City",
-      "name": "Woodville"
-    },
-    {
-      "@type": "City",
-      "name": "Newhall"
-    },
-    {
-      "@type": "City",
-      "name": "Church Gresley"
-    },
-    {
-      "@type": "City",
-      "name": "Hartshorne"
-    },
-    {
-      "@type": "City",
-      "name": "Moira"
     }
   ],
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 52.7741,
-      "longitude": -1.5568
-    },
-    "geoRadius": "25000"
-  },
+  "url": "https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "GBP",
-    "priceRange": "££",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2024-01-01"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "50",
-    "bestRating": "5"
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "20000",
+      "priceCurrency": "GBP",
+      "unitText": "from"
+    }
   }
-}</script><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do I need planning permission for a loft conversion in Swadlincote?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most loft conversions in Swadlincote fall under Permitted Development Rights and do not require planning permission, provided the additional volume does not exceed 40 cubic metres for terraced houses or 50 cubic metres for detached and semi-detached houses. However, dormer conversions visible from the front of the property, or properties in conservation areas, may require planning permission. AB Construction Ltd handles all planning enquiries on your behalf."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does a loft conversion cost in Derbyshire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Loft conversion costs in Derbyshire typically range from £25,000 to £50,000 depending on the type. A basic Velux conversion starts from around £25,000, a dormer conversion from £35,000, and a hip-to-gable conversion from £45,000. These prices include all structural work, insulation, plastering, electrics, and a staircase. Contact us for a free, personalised quote."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a typical loft conversion take to complete?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A typical loft conversion in Swadlincote takes between 6 and 10 weeks to complete, depending on the type and complexity of the conversion."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can any type of loft be converted?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most lofts can be converted, but the key requirement is sufficient head height (at least 2.2m from floor to ridge). Our team will carry out a free survey to assess your loft's suitability and recommend the best conversion type."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will a loft conversion add value to my home in Derbyshire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. A loft conversion is one of the most cost-effective ways to add value to your home, potentially increasing its value by 15\u201325%. It also adds a valuable extra bedroom or living space without the need to move."
-      }
-    }
-  ]
-}</script><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://ab-construction-swadlincote.surge.sh/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://ab-construction-swadlincote.surge.sh/#services"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Loft Conversions",
-      "item": "https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html"
-    }
-  ]
-}</script>
+}
+</script>
 </head>
 <body>
 <!-- Top Bar -->
@@ -250,6 +185,7 @@
 </li>
 <li><a href="../portfolio.html">Portfolio</a></li>
 <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
 <li><a href="../index.html#about">About Us</a></li>
 <li><a href="../index.html#contact">Contact</a></li>
 </ul>

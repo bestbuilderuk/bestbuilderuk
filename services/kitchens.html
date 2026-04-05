@@ -30,39 +30,80 @@
 <meta content="https://ab-construction-swadlincote.surge.sh/images/hero-bg.jpg" name="twitter:image"/>
 <link href="https://ab-construction-swadlincote.surge.sh/services/kitchens.html" rel="canonical"/>
 <link href="../css/style.css" rel="stylesheet"/>
-<!-- Schema.org Service -->
-<script type="application/ld+json">{
+
+
+<!-- Schema.org JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "LocalBusiness"
+  ],
+  "@id": "https://ab-construction-swadlincote.surge.sh/#business",
+  "name": "AB Construction UK Ltd",
+  "url": "https://ab-construction-swadlincote.surge.sh",
+  "telephone": [
+    "+441283310115",
+    "+447710280062"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Swadlincote",
+    "addressRegion": "Derbyshire",
+    "postalCode": "DE11 7LH",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Swadlincote"
+    },
+    {
+      "@type": "City",
+      "name": "Burton-on-Trent"
+    },
+    {
+      "@type": "City",
+      "name": "Derby"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "South Derbyshire"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Kitchen Installation Swadlincote",
-  "description": "Complete kitchen fitting and renovation in Swadlincote and South Derbyshire. Design, supply and install. Free quotes — call 01283 310115.",
-  "url": "https://ab-construction-swadlincote.surge.sh/services/kitchens.html",
-  "serviceType": "Kitchen Installation Swadlincote",
+  "@id": "https://ab-construction-swadlincote.surge.sh/services/kitchens.html#service",
+  "name": "Kitchen Renovation Swadlincote",
+  "serviceType": "Kitchen Renovation",
+  "description": "Complete kitchen design, fitting, and renovation service in Swadlincote, Burton-on-Trent, Derby, and South Derbyshire. Supply and fit or fit-only options available.",
   "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://ab-construction-swadlincote.surge.sh/#business",
-    "name": "AB Construction Ltd",
-    "telephone": [
-      "+441283310115",
-      "+447710280062"
-    ],
-    "email": "abconstructionltd@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Unit 10, Viking Business Centre, Woodville",
-      "addressLocality": "Swadlincote",
-      "addressRegion": "Derbyshire",
-      "postalCode": "DE11 7LH",
-      "addressCountry": "GB"
-    },
-    "url": "https://ab-construction-swadlincote.surge.sh",
-    "sameAs": [
-      "https://www.facebook.com/abconstructionltd",
-      "https://www.yell.com/biz/ab-construction-u-k-ltd-swadlincote-901760680/",
-      "https://find-and-update.company-information.service.gov.uk/company/14328530",
-      "https://nextdoor.co.uk/pages/ab-construction-uk-ltd/",
-      "https://www.instagram.com/abconstructionukltd/"
-    ]
+    "@id": "https://ab-construction-swadlincote.surge.sh/#business"
   },
   "areaServed": [
     {
@@ -75,136 +116,16 @@
     },
     {
       "@type": "City",
-      "name": "Ashby-de-la-Zouch"
+      "name": "Derby"
     },
     {
       "@type": "AdministrativeArea",
       "name": "South Derbyshire"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Derbyshire"
-    },
-    {
-      "@type": "City",
-      "name": "Melbourne"
-    },
-    {
-      "@type": "City",
-      "name": "Repton"
-    },
-    {
-      "@type": "City",
-      "name": "Woodville"
-    },
-    {
-      "@type": "City",
-      "name": "Newhall"
-    },
-    {
-      "@type": "City",
-      "name": "Church Gresley"
-    },
-    {
-      "@type": "City",
-      "name": "Hartshorne"
-    },
-    {
-      "@type": "City",
-      "name": "Moira"
     }
   ],
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 52.7741,
-      "longitude": -1.5568
-    },
-    "geoRadius": "25000"
-  },
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "GBP",
-    "priceRange": "££",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2024-01-01"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "50",
-    "bestRating": "5"
-  }
-}</script><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How long does a kitchen renovation take in Swadlincote?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A typical kitchen renovation in Swadlincote takes between 1 and 3 weeks to complete, depending on the size and complexity of the project. AB Construction Ltd will provide you with a detailed timeline before work begins."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you handle plumbing and electrics during a kitchen renovation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. AB Construction Ltd manages all trades involved in a kitchen renovation, including plumbing, electrics, plastering, and tiling. We coordinate everything so you have a single point of contact throughout your project."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you work with my existing kitchen layout?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. We can work with your existing layout or redesign the space entirely to maximise functionality and style. Our team will advise on the best approach for your budget and requirements."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide a guarantee on your kitchen fitting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. All kitchen fitting and installation work carried out by AB Construction Ltd in South Derbyshire is backed by a workmanship guarantee. We only use quality materials and products."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does a new kitchen cost in South Derbyshire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Kitchen renovation costs in South Derbyshire vary widely depending on the size, specification, and materials. A mid-range kitchen renovation typically costs between \u00a38,000 and \u00a320,000 fully fitted. Contact us for a free, detailed quote."
-      }
-    }
-  ]
-}</script><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://ab-construction-swadlincote.surge.sh/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://ab-construction-swadlincote.surge.sh/#services"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Kitchens",
-      "item": "https://ab-construction-swadlincote.surge.sh/services/kitchens.html"
-    }
-  ]
-}</script>
+  "url": "https://ab-construction-swadlincote.surge.sh/services/kitchens.html"
+}
+</script>
 </head>
 <body>
 <!-- Top Bar -->
@@ -250,6 +171,7 @@
 </li>
 <li><a href="../portfolio.html">Portfolio</a></li>
 <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
 <li><a href="../index.html#about">About Us</a></li>
 <li><a href="../index.html#contact">Contact</a></li>
 </ul>

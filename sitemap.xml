@@ -7,6 +7,48 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/services/brickwork.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/services/joinery.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/services/extensions.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/services/kitchens.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/services/bathrooms.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/services/renovation-works.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://ab-construction-swadlincote.surge.sh/portfolio.html</loc>
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -19,52 +61,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/faq.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ab-construction-swadlincote.surge.sh/about-company.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ab-construction-swadlincote.surge.sh/referral.html</loc>
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/services/brickwork.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/services/joinery.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/services/extensions.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/services/loft-conversions.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/services/kitchens.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/services/bathrooms.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/services/renovation-works.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ab-construction-swadlincote.surge.sh/blog/best-builders-swadlincote.html</loc>
@@ -91,7 +103,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/blog/home-extensions-swadlincote.html</loc>
+    <loc>https://ab-construction-swadlincote.surge.sh/blog/home-extensions-swadlincote-guide.html</loc>
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -103,7 +115,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ab-construction-swadlincote.surge.sh/blog/loft-conversion-derbyshire-ideas.html</loc>
+    <loc>https://ab-construction-swadlincote.surge.sh/blog/loft-conversion-derbyshire.html</loc>
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
