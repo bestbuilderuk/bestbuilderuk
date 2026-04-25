@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Panel | AB Construction UK Ltd</title>
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Panel | AB Construction UK Ltd</title>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
     .admin-body { background: var(--gray-100); min-height: 100vh; }
     .admin-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
     .admin-search { padding: 10px 16px; border: 2px solid var(--gray-300); border-radius: var(--radius); font-size: 0.95rem; min-width: 250px; }
@@ -56,118 +57,111 @@
   ]
 }
 </script>
-</head>
+<link href="https://ab-construction-swadlincote.surge.sh/admin.html" rel="canonical"/></head>
 <body class="admin-body">
-  <!-- Admin Header -->
-  <header class="admin-header">
-    <div class="container">
-      <div style="display:flex; align-items:center; gap:15px;">
-        <a href="index.html" style="color:var(--accent-light); font-size:0.9rem;">← Back to Website</a>
-        <h1>📊 Admin Panel — Lead Management</h1>
-      </div>
-      <div style="color:var(--gray-400); font-size:0.9rem;">
+<!-- Admin Header -->
+<header class="admin-header">
+<div class="container">
+<div style="display:flex; align-items:center; gap:15px;">
+<a href="index.html" style="color:var(--accent-light); font-size:0.9rem;">← Back to Website</a>
+<h1>📊 Admin Panel — Lead Management</h1>
+</div>
+<div style="color:var(--gray-400); font-size:0.9rem;">
         AB Construction UK Ltd
       </div>
-    </div>
-  </header>
-
-  <div class="container" style="padding-top:20px; padding-bottom:40px;">
-    <!-- Login Gate -->
-    <div id="loginGate">
-      <div class="admin-login">
-        <h2>🔐 Admin Login</h2>
-        <p style="color:var(--gray-600); margin-bottom:20px;">Enter the admin password to access the lead management panel.</p>
-        <div class="form-group">
-          <input type="password" id="adminPassword" placeholder="Enter admin password" style="text-align:center;">
-        </div>
-        <button onclick="attemptLogin()" class="btn btn-primary" style="width:100%;">Login</button>
-        <p style="color:var(--gray-500); font-size:0.8rem; margin-top:15px;">Default password: <strong>admin2025</strong></p>
-      </div>
-    </div>
-
-    <!-- Admin Dashboard (hidden until login) -->
-    <div id="adminDashboard" style="display:none;">
-      <!-- Stats -->
-      <div class="admin-stats" id="adminStats">
-        <div class="admin-stat-card">
-          <h3 id="totalLeads">0</h3>
-          <p>Total Leads</p>
-        </div>
-        <div class="admin-stat-card">
-          <h3 id="newLeads">0</h3>
-          <p>New Leads</p>
-        </div>
-        <div class="admin-stat-card">
-          <h3 id="contactedLeads">0</h3>
-          <p>Contacted</p>
-        </div>
-        <div class="admin-stat-card">
-          <h3 id="todayLeads">0</h3>
-          <p>Today's Leads</p>
-        </div>
-      </div>
-
-      <!-- Toolbar -->
-      <div class="admin-toolbar">
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <input type="text" class="admin-search" id="searchInput" placeholder="🔍 Search leads..." oninput="renderLeads()">
-          <select class="admin-filter" id="serviceFilter" onchange="renderLeads()">
-            <option value="">All Services</option>
-            <option value="Brickwork">Brickwork</option>
-            <option value="Joinery">Joinery</option>
-            <option value="Extensions">Extensions</option>
-            <option value="Loft Conversions">Loft Conversions</option>
-            <option value="Kitchens">Kitchens</option>
-            <option value="Bathrooms">Bathrooms</option>
-            <option value="Renovation Works">Renovation Works</option>
-          </select>
-          <select class="admin-filter" id="statusFilter" onchange="renderLeads()">
-            <option value="">All Statuses</option>
-            <option value="new">New</option>
-            <option value="contacted">Contacted</option>
-          </select>
-        </div>
-        <div class="admin-actions">
-          <button class="demo-btn" onclick="addDemoLeads()">+ Add Demo Leads</button>
-          <button class="export-btn" onclick="exportLeads()">📥 Export CSV</button>
-          <button class="clear-btn" onclick="clearAllLeads()">🗑️ Clear All</button>
-        </div>
-      </div>
-
-      <!-- Leads Table -->
-      <div class="leads-table" id="leadsTableContainer">
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>Service</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="leadsTableBody">
-          </tbody>
-        </table>
-      </div>
-
-      <div class="no-leads" id="noLeadsMessage" style="display:none;">
-        <h3>📭 No Leads Yet</h3>
-        <p>When visitors submit the contact form, their enquiries will appear here.</p>
-        <p style="margin-top:10px;">Click "Add Demo Leads" above to see how it works.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Lead Detail Modal -->
-  <div class="lead-detail-modal" id="leadModal">
-    <div class="lead-detail-content" id="leadModalContent">
-    </div>
-  </div>
-
-  <script>
+</div>
+</header>
+<div class="container" style="padding-top:20px; padding-bottom:40px;">
+<!-- Login Gate -->
+<div id="loginGate">
+<div class="admin-login">
+<h2>🔐 Admin Login</h2>
+<p style="color:var(--gray-600); margin-bottom:20px;">Enter the admin password to access the lead management panel.</p>
+<div class="form-group">
+<input id="adminPassword" placeholder="Enter admin password" style="text-align:center;" type="password"/>
+</div>
+<button class="btn btn-primary" onclick="attemptLogin()" style="width:100%;">Login</button>
+<p style="color:var(--gray-500); font-size:0.8rem; margin-top:15px;">Default password: <strong>admin2025</strong></p>
+</div>
+</div>
+<!-- Admin Dashboard (hidden until login) -->
+<div id="adminDashboard" style="display:none;">
+<!-- Stats -->
+<div class="admin-stats" id="adminStats">
+<div class="admin-stat-card">
+<h3 id="totalLeads">0</h3>
+<p>Total Leads</p>
+</div>
+<div class="admin-stat-card">
+<h3 id="newLeads">0</h3>
+<p>New Leads</p>
+</div>
+<div class="admin-stat-card">
+<h3 id="contactedLeads">0</h3>
+<p>Contacted</p>
+</div>
+<div class="admin-stat-card">
+<h3 id="todayLeads">0</h3>
+<p>Today's Leads</p>
+</div>
+</div>
+<!-- Toolbar -->
+<div class="admin-toolbar">
+<div style="display:flex; gap:10px; flex-wrap:wrap;">
+<input class="admin-search" id="searchInput" oninput="renderLeads()" placeholder="🔍 Search leads..." type="text"/>
+<select class="admin-filter" id="serviceFilter" onchange="renderLeads()">
+<option value="">All Services</option>
+<option value="Brickwork">Brickwork</option>
+<option value="Joinery">Joinery</option>
+<option value="Extensions">Extensions</option>
+<option value="Loft Conversions">Loft Conversions</option>
+<option value="Kitchens">Kitchens</option>
+<option value="Bathrooms">Bathrooms</option>
+<option value="Renovation Works">Renovation Works</option>
+</select>
+<select class="admin-filter" id="statusFilter" onchange="renderLeads()">
+<option value="">All Statuses</option>
+<option value="new">New</option>
+<option value="contacted">Contacted</option>
+</select>
+</div>
+<div class="admin-actions">
+<button class="demo-btn" onclick="addDemoLeads()">+ Add Demo Leads</button>
+<button class="export-btn" onclick="exportLeads()">📥 Export CSV</button>
+<button class="clear-btn" onclick="clearAllLeads()">🗑️ Clear All</button>
+</div>
+</div>
+<!-- Leads Table -->
+<div class="leads-table" id="leadsTableContainer">
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Service</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="leadsTableBody">
+</tbody>
+</table>
+</div>
+<div class="no-leads" id="noLeadsMessage" style="display:none;">
+<h3>📭 No Leads Yet</h3>
+<p>When visitors submit the contact form, their enquiries will appear here.</p>
+<p style="margin-top:10px;">Click "Add Demo Leads" above to see how it works.</p>
+</div>
+</div>
+</div>
+<!-- Lead Detail Modal -->
+<div class="lead-detail-modal" id="leadModal">
+<div class="lead-detail-content" id="leadModalContent">
+</div>
+</div>
+<script>
     // Admin password
     const ADMIN_PASSWORD = 'admin2025';
 
