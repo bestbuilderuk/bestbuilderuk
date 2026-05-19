@@ -1,8 +1,32 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
-
 Sitemap: https://ab-construction-swadlincote.surge.sh/sitemap.xml
+
+# Allow major AI search crawlers explicitly
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
